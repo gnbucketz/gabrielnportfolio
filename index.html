@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gabriel Nguyen</title>
+  <meta name="description" content="Portfolio of Gabriel Nguyen, an aspiring hardware engineer with experience in PCB design and embedded systems.">
+  <meta name="keywords" content="Gabriel Nguyen, Hardware Engineer, PCB Design, Embedded Systems, Portfolio">
+  <title>Gabriel Nguyen - Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     .project-image {
       width: 400px;
       height: 300px;
     }
-    .relative {
+    .carousel-container {
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
+      overflow: hidden;
     }
     .carousel-images {
       display: flex;
@@ -41,7 +44,7 @@
       right: 10px;
     }
     .description {
-      font-size: 1.25rem; /* 1.25rem = 20px */
+      font-size: 1.25rem;
     }
   </style>
 </head>
@@ -49,27 +52,27 @@
 
   <nav class="bg-white shadow">
     <div class="container mx-auto px-4 py-3 flex items-center">
-        <a href="#" class="text-xl font-bold">Gabriel Nguyen</a>
-        <div class="social-icons ml-auto flex gap-4">
-            <a href="https://www.linkedin.com/in/gabriel-nguyen-4b992b211/" target="_blank" rel="noopener noreferrer">
-                <img src="images/linkedin.png" alt="" class="h-8 w-8">
-            </a>
-            <a href="https://github.com/gnbucketz" target="_blank" rel="noopener noreferrer">
-                <img src="images/25231.png" alt="" class="h-8 w-8">
-            </a>
-            <a href="mailto:gabrielnguyeen@gmail.com">
-                <img src="images/Gmail_Logo_512px.png" alt="" class="h-8 w-8">
-            </a>
-        </div>
-        <div class="space-x-4 ml-8">
-            <a href="#home" class="hover:text-blue-500">Home</a>
-            <a href="#about" class="hover:text-blue-500">About Me</a>
-            <a href="#experience" class="hover:text-blue-500">Experience</a>
-            <a href="#projects" class="hover:text-blue-500">Projects</a>
-            <a href="#resume" class="hover:text-blue-500">Resume</a>
-        </div>
+      <a href="#" class="text-xl font-bold">Gabriel Nguyen</a>
+      <div class="social-icons ml-auto flex gap-4">
+        <a href="https://www.linkedin.com/in/gabriel-nguyen-4b992b211/" target="_blank" rel="noopener noreferrer">
+          <img src="images/linkedin.png" alt="LinkedIn Profile" class="h-8 w-8">
+        </a>
+        <a href="https://github.com/gnbucketz" target="_blank" rel="noopener noreferrer">
+          <img src="images/25231.png" alt="GitHub Profile" class="h-8 w-8">
+        </a>
+        <a href="mailto:gabrielnguyeen@gmail.com">
+          <img src="images/Gmail_Logo_512px.png" alt="Email Gabriel Nguyen" class="h-8 w-8">
+        </a>
+      </div>
+      <div class="space-x-4 ml-8">
+        <a href="#home" class="hover:text-blue-500">Home</a>
+        <a href="#about" class="hover:text-blue-500">About Me</a>
+        <a href="#experience" class="hover:text-blue-500">Experience</a>
+        <a href="#projects" class="hover:text-blue-500">Projects</a>
+        <a href="#resume" class="hover:text-blue-500">Resume</a>
+      </div>
     </div>
-</nav>
+  </nav>
 
   <!-- Home Section -->
   <section id="home" class="container mx-auto px-4 py-20 text-center">
@@ -81,15 +84,12 @@
   <section id="about" class="container mx-auto px-4 py-20 bg-gray-50">
     <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
     <div class="flex flex-col md:flex-row items-top">
-      <img src="https://github.com/user-attachments/assets/2e107659-5696-451b-bb76-245e71464875" alt="Gabriel Nguyen" class="w-full h-49 object-cover rounded-lg mb-4 md:mb-0 md:mr-6" style="width: 400px; height: 500px;">
+      <img src="https://github.com/user-attachments/assets/2e107659-5696-451b-bb76-245e71464875" alt="Gabriel Nguyen" class="w-full object-cover rounded-lg mb-4 md:mb-0 md:mr-6" style="width: 400px; height: 500px;">
       <div>
         <p class="text-gray-700 description">• I am an EE student, eager to learn new things regarding hardware and electrical engineering.</p>
-        </br>
-        <p class="text-gray-700 description">• My interests include PCB design and embedded systems. I love designing PCB and integrating MCU systems.</p>
-        </br>
-        <p class="text-gray-700 description">• I'm working towards a career in hardware engineering, where I hope to make innovations in technology.</p>
-        </br>
-        <p class="text-gray-700 description">• Outside of schoolwork and working on projects, I like to go to the gym and hangout with my friends.</p>
+        <p class="text-gray-700 description mt-4">• My interests include PCB design and embedded systems. I love designing PCB and integrating MCU systems.</p>
+        <p class="text-gray-700 description mt-4">• I'm working towards a career in hardware engineering, where I hope to make innovations in technology.</p>
+        <p class="text-gray-700 description mt-4">• Outside of schoolwork and working on projects, I like to go to the gym and hang out with my friends.</p>
       </div>
     </div>
   </section>
@@ -103,10 +103,10 @@
         <div>
           <h3 class="text-2xl font-bold mb-2">Electrical Engineer Intern @Movano Health</h3>
           <p class="text-gray-600 mb-2">May 2024 - Present</p>
-          <p class="text-gray-700 description">• Led research on the impact of Evie Ring capacitance during prolonged charging, creating current gauging software</p>
-          <p class="text-gray-700 description">• Debugged current consumption issues in medical devices, developing hardware defect identification Python scripts</p>
-          <p class="text-gray-700 description">• Built current discharge scripts to deduce optimal resin material compatibility, achieving below 25% battery error</p>
-          <p class="text-gray-700 description">• Dissected over 100+ products to perform root cause analysis on capacitance issues by isolating PCB components</p>
+          <p class="text-gray-700 description">• Led research on the impact of Evie Ring capacitance during prolonged charging, creating current gauging software.</p>
+          <p class="text-gray-700 description mt-2">• Debugged current consumption issues in medical devices, developing hardware defect identification Python scripts.</p>
+          <p class="text-gray-700 description mt-2">• Built current discharge scripts to deduce optimal resin material compatibility, achieving below 25% battery error.</p>
+          <p class="text-gray-700 description mt-2">• Dissected over 100+ products to perform root cause analysis on capacitance issues by isolating PCB components.</p>
         </div>
       </div>
       <div class="bg-white shadow-md rounded-lg p-6 flex flex-col md:flex-row">
@@ -114,9 +114,9 @@
         <div>
           <h3 class="text-2xl font-bold mb-2">Hardware Engineering Officer @SCE</h3>
           <p class="text-gray-600 mb-2">January 2024 - Present</p>
-          <p class="text-gray-700 description">• Collaborated with a team of engineering students to build a Jetson Nano autonomous drone for aerial data collection</p>
-          <p class="text-gray-700 description">• Designed 4-6 layered STM MCU-powered flight controllers with pressure and motion detection capabilities</p>
-          <p class="text-gray-700 description">• Configured 5+ multi-layered breakout boards for micro-controller components such as the IMU and barometer</p>
+          <p class="text-gray-700 description">• Collaborated with a team of engineering students to build a Jetson Nano autonomous drone for aerial data collection.</p>
+          <p class="text-gray-700 description mt-2">• Designed 4-6 layered STM MCU-powered flight controllers with pressure and motion detection capabilities.</p>
+          <p class="text-gray-700 description mt-2">• Configured 5+ multi-layered breakout boards for micro-controller components such as the IMU and barometer.</p>
         </div>
       </div>
     </div>
@@ -127,37 +127,51 @@
     <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div class="bg-white shadow-md rounded-lg overflow-hidden">
-        <div class="relative">
+        <div class="carousel-container">
           <div class="carousel-images">
             <img src="https://github.com/user-attachments/assets/73b19026-adc6-42ef-96f2-30f385d418d6" alt="Drone Image 1" class="project-image">
             <img src="images/SCEFC2.PNG" alt="Drone Image 2" class="project-image">
             <img src="images/SCESCH.PNG" alt="Drone Image 3" class="project-image">
           </div>
-          <button class="carousel-button carousel-prev">‹</button>
-          <button class="carousel-button carousel-next">›</button>
+          <button class="carousel-button carousel-prev" aria-label="Previous Image">‹</button>
+          <button class="carousel-button carousel-next" aria-label="Next Image">›</button>
         </div>
         <div class="p-4">
           <h3 class="text-xl font-bold mb-2">Jetson Nano Autonomous Drone</h3>
-          <p class="text-gray-600 description">• Collaborated with engineering students to create an autonomous drone</p>
-          <p class="text-gray-600 description">• Designed flight control systems, integrating GPS, IMU, barometer, and sonar capabilities into PCB</p>
+          <p class="text-gray-600 description">• Collaborated with engineering students to create an autonomous drone.</p>
+          <p class="text-gray-600 description mt-2">• Designed flight control systems, integrating GPS, IMU, barometer, and sonar capabilities into PCB.</p>
         </div>
       </div>
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <div class="relative">
-              <div class="carousel-images">
-                <img src="images/placeholder.png" alt="Image 1" class="project-image">
-                <img src="images/placeholder.png" alt="Image 2" class="project-image">
-                <img src="images/placeholder.png" alt="Image 3" class="project-image">
-              </div>
-              <button class="carousel-button carousel-prev">‹</button>
-              <button class="carousel-button carousel-next">›</button>
-            </div>
-            <div class="p-4">
-              <h3 class="text-xl font-bold mb-2">Air Quality Detecting Sensor</h3>
-              <p class="text-gray-600 description">• Developed an air quality detection clock using ESP32 MCU, integrating sensors such as SGP40, BME280, and GP2Y1010AU0F, providing real-time environmental data </p>
-              <p class="text-gray-600 description">• </p>
-            </div>
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="carousel-container">
+          <div class="carousel-images">
+            <img src="images/placeholder.png" alt="Image 1" class="project-image">
+            <img src="images/placeholder.png" alt="Image 2" class="project-image">
+            <img src="images/placeholder.png" alt="Image 3" class="project-image">
           </div>
+          <button class="carousel-button carousel-prev" aria-label="Previous Image">‹</button>
+          <button class="carousel-button carousel-next" aria-label="Next Image">›</button>
+        </div>
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">Air Quality Detecting Sensor</h3>
+          <p class="text-gray-600 description">• Developed an air quality detection clock using ESP32 MCU, integrating sensors such as SGP40, BME280, and GP2Y1010AU0F, providing real-time environmental data.</p>
+        </div>
+      </div>
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="carousel-container">
+          <div class="carousel-images">
+            <img src="images/placeholder.png" alt="Screenshot 1" class="project-image">
+            <img src="images/placeholder.png" alt="Screenshot 2" class="project-image">
+            <img src="images/placeholder.png" alt="Screenshot 3" class="project-image">
+          </div>
+          <button class="carousel-button carousel-prev" aria-label="Previous Image">‹</button>
+          <button class="carousel-button carousel-next" aria-label="Next Image">›</button>
+        </div>
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">Battery Management System</h3>
+          <p class="text-gray-600 description">• Designed a BMS with an ESP32 and BQ76940 to monitor SoC, voltage, current, and capacity of Li-ion and Li-Po batteries.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -167,7 +181,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const carousels = document.querySelectorAll('.relative');
+      const carousels = document.querySelectorAll('.carousel-container');
 
       carousels.forEach(carousel => {
         const prevButton = carousel.querySelector('.carousel-prev');
